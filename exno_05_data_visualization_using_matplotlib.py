@@ -9,10 +9,10 @@ Original file is located at
 **Data visualization Using Matplotlib**
 """
 
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
+import pandas as pd # pyright: ignore[reportMissingModuleSource]
+import numpy as np # pyright: ignore[reportMissingImports]
+import seaborn as sns # pyright: ignore[reportMissingModuleSource]
+import matplotlib.pyplot as plt # pyright: ignore[reportMissingModuleSource]
 
 x = [1, 2, 3, 4, 5]
 y = [3, 6, 2, 7, 1]
@@ -40,7 +40,7 @@ y_values = [0,1,4,9,16,25]
 
 # implement line graph using fill between option
 
-from scipy.interpolate import make_interp_spline
+from scipy.interpolate import make_interp_spline # pyright: ignore[reportMissingImports]
 x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 y = np.array([2, 4, 5, 7, 8, 8, 9, 10, 11, 12])
 
@@ -62,8 +62,8 @@ df = sns.load_dataset("tips")
 df
 
 plt.figure(figsize=(8, 6))
-p1 = plt.bar(avg_total_bill.index, avg_total_bill, label='Total Bill')
-p2 = plt.bar(avg_tip.index, avg_tip, bottom=avg_total_bill, label='Tip')
+p1 = plt.bar(avg_total_bill.index, avg_total_bill, label='Total Bill') # pyright: ignore[reportUndefinedVariable]
+p2 = plt.bar(avg_tip.index, avg_tip, bottom=avg_total_bill, label='Tip') # pyright: ignore[reportUndefinedVariable]
 # Set the labels and title
 plt.xlabel('Day of the Week')
 plt.ylabel('Amount')
